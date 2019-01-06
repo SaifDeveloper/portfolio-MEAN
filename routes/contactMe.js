@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const config = require('../config/database');
-const Contact= require('../models/contact');
+const Contact= require('../models/contactModel');
 
 
 router.post('/contactme',function (req,res,next) {
