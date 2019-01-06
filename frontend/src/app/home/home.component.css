@@ -1,0 +1,9 @@
+.top{
+  text-align: center;
+  background-color: #3752B3;
+}
+.top img{
+    width: 200px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}

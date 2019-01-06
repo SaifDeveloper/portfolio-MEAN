@@ -1,0 +1,44 @@
+.contact-form{
+  text-align: center;
+  margin-top: 2%;
+  /* position: absolute; */
+}
+.contact-card{
+  display: inline-block;
+}
+@media(min-width:800px){
+
+  .contact-card{
+    width: 30%;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media(max-width:800px){
+  .contact-card{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+  }
+}
+.header{
+  background-color: #3752B3;
+  color: #ffffff;
+}
+form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container > * {
+  width: 100%;
+}
+
+button{
+  background-color: #3752B3;
+}
+/* .top{
+  background-color: #3752B3;
+  min-height:200px;
+  position: relative;
+} */

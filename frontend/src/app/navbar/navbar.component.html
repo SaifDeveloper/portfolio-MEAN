@@ -1,0 +1,38 @@
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo z-depth-1-half">
+
+  <!-- Navbar brand -->
+  <mdb-navbar-brand><a class="navbar-brand" href="#">Saif's Portfolio</a></mdb-navbar-brand>
+
+  <!-- Collapsible content -->
+  <links>
+
+      <!-- Links -->
+      <ul class="navbar-nav ml-auto">
+          <!-- <li class="nav-item active">
+              <a routerLink="/" class="nav-link waves-light" mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
+          </li> -->
+          <li class="nav-item">
+              <a routerLink="/" class="nav-link waves-light" mdbWavesEffect>Skills</a>
+          </li>
+          <!-- Dropdown -->
+          <li class="nav-item dropdown" dropdown>
+            <a  dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+            Experience<span class="caret"></span></a>
+            <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+                <a routerLink="/" class="dropdown-item waves-light" mdbWavesEffect href="#">Personal Projects</a>
+                <a routerLink="/" class="dropdown-item waves-light" mdbWavesEffect href="#">Professional History</a>
+            </div>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link waves-light" mdbWavesEffect>Contact</a>
+          </li>
+
+
+      </ul>
+      <!-- Links -->
+  </links>
+  <!-- Collapsible content -->
+
+</mdb-navbar>
+<!--/.Navbar-->
