@@ -5,13 +5,14 @@ const cors = require('cors');
 const passport = require('passport');
 const mongoose = require('mongoose');
 const config = require('./config/database');
+require('dotenv').config();
 
 // Connect To Database
-mongoose.connect(config.database,{useNewUrlParser: true});
+mongoose.connect(process.env.DATABASE_URL,{useNewUrlParser: true});
 
 // On Connection
 mongoose.connection.on('connected', () => {
-  console.log('Connected to database '+config.database);
+  console.log('Connected to database '+process.env.DATABASE_URL);
 });
 
 // On Error
@@ -33,6 +34,9 @@ app.use(cors());
 
 // Set Static Folder
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Set view Engine
+// app.set('view engine', 'jade');
 
 // Body Parser Middleware
 app.use(bodyParser.json());
@@ -58,7 +62,10 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.json({
+    message: err.message,
+    error: err
+  });
 });
 
 // Start Server

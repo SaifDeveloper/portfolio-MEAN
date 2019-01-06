@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const config = require('../config/database');
 
 //contact Schema
 const ContactSchema = mongoose.Schema({
@@ -24,6 +23,6 @@ const ContactSchema = mongoose.Schema({
 const Contact = module.exports = mongoose.model('Contact',ContactSchema);
 
 module.exports.addContact = function(newContact, callback) {
-    //if(err) throw err;
+    // console.log("entered!",newContact);
     newContact.save(callback);
 };
