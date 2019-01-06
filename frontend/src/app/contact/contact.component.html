@@ -6,26 +6,26 @@
       </mat-toolbar> -->
       <div class="form-container">
         <mat-form-field>
-          <input matInput placeholder="Your Name">
+          <input matInput placeholder="Your Name" [(ngModel)]="name">
         </mat-form-field>
 
         <mat-form-field>
-          <input matInput placeholder="Your Email">
+          <input matInput placeholder="Your Email" [(ngModel)]="email">
         </mat-form-field>
 
         <mat-form-field>
-          <mat-select placeholder="Subject">
-            <mat-option value="option">Query</mat-option>
-            <mat-option value="option">Feedback</mat-option>
-            <mat-option value="option">Report a bug</mat-option>
-            <mat-option value="option">Don't have a subject!</mat-option>
+          <mat-select placeholder="Subject" [(value)]="subject">
+            <mat-option value="query">Query</mat-option>
+            <mat-option value="feedback">Feedback</mat-option>
+            <mat-option value="bugReport">Report a bug</mat-option>
+            <mat-option value="noSubject">Don't have a subject!</mat-option>
           </mat-select>
         </mat-form-field>
 
         <mat-form-field>
-          <textarea matInput placeholder="Message" cdkTextareaAutosize cdkAutosizeMinRows="5" cdkAutosizeMaxRows="10"></textarea>
+          <textarea matInput placeholder="Message"  [(ngModel)]="message" cdkTextareaAutosize cdkAutosizeMinRows="5" cdkAutosizeMaxRows="10"></textarea>
         </mat-form-field>
-        <button mat-raised-button color="primary">Submit</button>
+        <button mat-raised-button color="primary" (click)="submit()">Submit</button>
       </div>
     </mat-card>
 </div>

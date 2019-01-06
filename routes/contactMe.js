@@ -5,6 +5,7 @@ const Contact= require('../models/contactModel');
 
 
 router.post('/contactme',function (req,res,next) {
+    console.log("inside contace me!")
     const newContact = new Contact({
         name: req.body.name,
         email: req.body.email,
