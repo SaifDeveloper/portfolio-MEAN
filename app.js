@@ -4,7 +4,6 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const passport = require('passport');
 const mongoose = require('mongoose');
-const config = require('./config/database');
 require('dotenv').config();
 
 // Connect To Database
@@ -26,8 +25,11 @@ const app = express();
 const index = require('./routes/index');
 const contactMe = require('./routes/contactMe');
 
-// Port Number
-const port = 3000;
+// Port Number - Dev
+// const port = 3000;
+
+// Port Number - Prod
+const port = process.env.PORT || 8080;
 
 // CORS Middleware
 app.use(cors());
