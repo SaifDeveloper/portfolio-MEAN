@@ -4,14 +4,15 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const passport = require('passport');
 const mongoose = require('mongoose');
-require('dotenv').config();
+const config = require('./config/database');
+// require('dotenv').config();
 
 // Connect To Database
-mongoose.connect(process.env.DATABASE_URL,{useNewUrlParser: true});
-
+// mongoose.connect(process.env.DATABASE_URL,{useNewUrlParser: true});
+mongoose.connect(config.database,{useNewUrlParser: true});
 // On Connection
 mongoose.connection.on('connected', () => {
-  console.log('Connected to database '+process.env.DATABASE_URL);
+  console.log('Connected to database '+config.database);
 });
 
 // On Error
