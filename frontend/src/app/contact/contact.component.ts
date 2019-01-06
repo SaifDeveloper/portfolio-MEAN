@@ -56,7 +56,10 @@ export class ContactComponent implements OnInit {
       message:this.message
     }
     console.log(JSON.stringify(ContactData));
-    this.http.post("http://localhost:3000/contactme", JSON.stringify(ContactData), httpOptions)
+    // Dev
+    // this.http.post("http://localhost:3000/contactme", JSON.stringify(ContactData), httpOptions)
+    // Prod
+    this.http.post("contactme", JSON.stringify(ContactData), httpOptions)
       .subscribe(
         (data)=>{
           console.log(data)
