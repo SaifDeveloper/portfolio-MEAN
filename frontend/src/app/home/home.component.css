@@ -7,3 +7,34 @@
     margin-top: 2%;
     margin-bottom: 2%;
 }
+.skills{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap:5px;
+}
+
+.skills mat-card{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+.logo img{
+  width: 70%;
+}
+.contents{
+  padding-top: 10px;
+}
+
+@media only screen and (max-width: 760px) {
+  .skills{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap:5px;
+  }
+  .contents{
+    padding-top: 0px;
+  }
+}
+
+:host /deep/.bg-info{
+  background-color: #2B54B1 !important;
+}
