@@ -24,10 +24,10 @@ export class ContactComponent implements OnInit {
   optionsSelect: Array<any>;
 
   // Variables
-  name:string = "saif";
-  email:string = "saikhsaifali@gmail.com";
-  subject:string  = "feedback";
-  message:string = "It's nice!";
+  name:string;
+  email:string;
+  subject:string;
+  message:string;
 
 
   constructor(private ngZone: NgZone,private http: HttpClient) { }

@@ -1,0 +1,26 @@
+.certifications{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap:5px;
+}
+.certificate-image,.certificate-details{
+  text-align: center;
+}
+.certificate-image img{
+  height: 300px;
+  width: 400px;
+}
+.certificate-details hr,button{
+  display: none;
+}
+@media only screen and (max-width: 760px) {
+  .certifications{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap:5px;
+  }
+  .certificate-image img{
+    height: 175px;
+    width: 300px;
+  }
+}

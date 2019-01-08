@@ -12,13 +12,17 @@ import { ContactComponent } from './contact/contact.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { SkillsComponent } from './skills/skills.component';
+import { CertificationsComponent } from './certifications/certifications.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    ContactComponent
+    ContactComponent,
+    SkillsComponent,
+    CertificationsComponent
   ],
   imports: [
     BrowserModule,
