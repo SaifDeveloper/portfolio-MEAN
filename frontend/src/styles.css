@@ -1,6 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Charm');
 
+/* Vertical Timeline */
+@import "~angular-vertical-timeline/dist/vertical-timeline.css";
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
@@ -46,4 +49,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .font24{
 	font-size:24px !important;
+}
+
+.centerText{
+  text-align: center;
+}
+
+.bold{
+  font-weight: bold;
 }

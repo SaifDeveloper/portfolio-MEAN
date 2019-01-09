@@ -15,6 +15,10 @@
   padding-top: 10px;
 }
 
+.contents h5{
+  font-weight: 400;
+}
+
 @media only screen and (max-width: 760px) {
   .skills{
     display: grid;

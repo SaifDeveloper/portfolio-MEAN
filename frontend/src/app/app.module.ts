@@ -14,6 +14,9 @@ import { HttpClientModule } from '@angular/common/http';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { SkillsComponent } from './skills/skills.component';
 import { CertificationsComponent } from './certifications/certifications.component';
+import { ProfessionalexpComponent } from './professionalexp/professionalexp.component';
+import { VerticalTimelineModule } from 'angular-vertical-timeline';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,8 @@ import { CertificationsComponent } from './certifications/certifications.compone
     NavbarComponent,
     ContactComponent,
     SkillsComponent,
-    CertificationsComponent
+    CertificationsComponent,
+    ProfessionalexpComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,9 @@ import { CertificationsComponent } from './certifications/certifications.compone
     HttpClientModule,
     MaterialModule,
     MDBBootstrapModule.forRoot(),
-    NgbModule
+    NgbModule,
+    VerticalTimelineModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,6 +4,7 @@ import {take} from 'rxjs/operators';
 import { HttpClient,HttpHeaders,HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
+import { ToastrService } from 'ngx-toastr';
 
 
 const httpOptions = {
@@ -29,8 +30,10 @@ export class ContactComponent implements OnInit {
   subject:string;
   message:string;
 
+  response:boolean;
 
-  constructor(private ngZone: NgZone,private http: HttpClient) { }
+
+  constructor(private ngZone: NgZone,private http: HttpClient,private toastr: ToastrService) { }
 
   ngOnInit() {
     this.optionsSelect = [
@@ -55,22 +58,26 @@ export class ContactComponent implements OnInit {
       subject:this.subject,
       message:this.message
     }
-    console.log(JSON.stringify(ContactData));
+    // console.log(JSON.stringify(ContactData));
     // Dev
-    // this.http.post("http://localhost:3000/contactme", JSON.stringify(ContactData), httpOptions)
+    // this.http.post("http://localhost:8080/contactme", JSON.stringify(ContactData), httpOptions)
     // Prod
     this.http.post("contactme", JSON.stringify(ContactData), httpOptions)
       .subscribe(
         (data)=>{
-          console.log(data)
+          // console.log("Response:",data.success)
+          this.response = data.success; //Response will be boolean
+          if(this.response){
+            this.toastr.success('Successfully Submitted!', 'Thank you!');
+          }else{
+            this.toastr.error('Something went wrong!','Please try again!')
+          }
         });
-    // try{
-    //   return this.http.post("http://localhost:3000/contactme", JSON.stringify(ContactData), httpOptions)
-    // }catch(err){
-    //   console.log(err);
-    //   this.handleError(err);
-    // }
+
+
+
   }
+
 
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
