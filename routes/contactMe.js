@@ -19,9 +19,11 @@ router.post('/',function (req,res,next) {
         // console.log("contact:",contact);
         if(err){
             console.log("error happened!");
-            res.json({success:false,msg:'failed to submit feedback/query'});
+            // res.json({success:false,msg:'failed to submit feedback/query'});
+            res.json(false);
         }else {
-            res.json({success:true,msg:'feedback/query submitted'})
+            // res.json({success:true,msg:'feedback/query submitted'})
+            res.json(true);
         }
     });
 

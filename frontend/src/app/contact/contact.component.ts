@@ -25,12 +25,15 @@ export class ContactComponent implements OnInit {
   optionsSelect: Array<any>;
 
   // Variables
+  // name:string = "saif";
+  // email:string = "saikhsaifali@gmail.com";
+  // subject:string = "noSubject";
+  // message:string = "nice!!!";
+
   name:string;
   email:string;
   subject:string;
   message:string;
-
-  response:boolean;
 
 
   constructor(private ngZone: NgZone,private http: HttpClient,private toastr: ToastrService) { }
@@ -65,9 +68,8 @@ export class ContactComponent implements OnInit {
     this.http.post("contactme", JSON.stringify(ContactData), httpOptions)
       .subscribe(
         (data)=>{
-          // console.log("Response:",data.success)
-          this.response = data.success; //Response will be boolean
-          if(this.response){
+          // console.log("Response:",data)
+          if(data){
             this.toastr.success('Successfully Submitted!', 'Thank you!');
           }else{
             this.toastr.error('Something went wrong!','Please try again!')
