@@ -17,6 +17,7 @@ import { CertificationsComponent } from './certifications/certifications.compone
 import { ProfessionalexpComponent } from './professionalexp/professionalexp.component';
 import { VerticalTimelineModule } from 'angular-vertical-timeline';
 import { ToastrModule } from 'ngx-toastr';
+import { PerosnalProjectsComponent } from './perosnal-projects/perosnal-projects.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ToastrModule } from 'ngx-toastr';
     ContactComponent,
     SkillsComponent,
     CertificationsComponent,
-    ProfessionalexpComponent
+    ProfessionalexpComponent,
+    PerosnalProjectsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,27 @@
+.perosnal-projects{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 40px;
+}
+mat-card{
+  padding: 0;
+}
+:host /deep/ .mat-toolbar-single-row{
+  height: 45px;
+}
+.project-image{
+  width: 350px;
+  height: 200px;
+}
+.buttons{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 5px;
+}
+@media only screen and (max-width: 760px) {
+  .perosnal-projects{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap:5px;
+  }
+}
