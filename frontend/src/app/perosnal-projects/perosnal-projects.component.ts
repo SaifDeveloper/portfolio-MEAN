@@ -14,4 +14,24 @@ export class PerosnalProjectsComponent implements OnInit {
 
   panelOpenState = true;
 
+  openGithub(project){
+    switch(project){
+      case 'fundraiser':{
+          window.open("https://www.google.com", "_blank");
+      }
+      case 'petshop':{
+        window.open("https://github.com/SaifDeveloper/pet-Shop", "_blank");
+      }
+      case 'lottery':{
+        window.open("https://github.com/SaifDeveloper/Lottery", "_blank");
+      }
+      case 'shoppingcart':{
+        window.open("https://github.com/SaifDeveloper/Lottery", "_blank");
+      }
+      case 'automation':{
+        window.open("https://github.com/SaifDeveloper/react-docker", "_blank");
+      }
+    }
+  }
+
 }
