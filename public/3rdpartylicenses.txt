@@ -775,6 +775,8 @@ Apache-2.0
    limitations under the License.
 
 
+@angular/material/toolbar
+
 @angular/material/dialog
 
 @angular/material/datepicker
