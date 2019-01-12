@@ -14,6 +14,7 @@ const routes: Routes = [
   { path: 'certifications', component: CertificationsComponent},
   { path: 'professionalexp', component: ProfessionalexpComponent},
   { path: 'personalprojects', component: PerosnalProjectsComponent},
+  { path: '**', component: HomeComponent}
 ];
 
 @NgModule({
