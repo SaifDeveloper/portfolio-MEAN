@@ -1,10 +1,8 @@
 <div class="top">
+
 <div class="contact-form">
     <mat-card class="contact-card mat-elevation-z4">
       <h5 class="centerText p-4 bold">It's always great to hear from you!</h5>
-      <!-- <mat-toolbar class="header">
-        <span>Message/Feedback</span>
-      </mat-toolbar> -->
       <div class="form-container">
         <mat-form-field>
           <input matInput placeholder="Your Name" [(ngModel)]="name">
@@ -28,6 +26,24 @@
         </mat-form-field>
         <button mat-raised-button color="primary" (click)="submit()">Submit</button>
       </div>
+      <div class="social-card centerText pt-4">
+          <div>
+            <button mat-fab class="linkedin_btn" (click)="openSocial('linkedin')">
+                <i class="fab fa-linkedin fa-2x"></i>
+            </button>
+          </div>
+          <div>
+            <button mat-fab class="twitter_btn" (click)="openSocial('twitter')">
+                <i class="fab fa-twitter fa-2x"></i>
+            </button>
+          </div>
+          <div>
+            <button mat-fab class="facebook_btn" (click)="openSocial('facebook')">
+                <i class="fab fa-facebook-f fa-2x"></i>
+            </button>
+          </div>
+      </div>
     </mat-card>
 </div>
+
 </div>

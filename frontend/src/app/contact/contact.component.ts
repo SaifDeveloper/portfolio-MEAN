@@ -97,4 +97,19 @@ export class ContactComponent implements OnInit {
       'Something bad happened; please try again later.');
   };
 
+  openSocial(social){
+    switch(social){
+      case 'linkedin':{
+          window.open("https://www.linkedin.com/in/saif-ali-3015328b/", "_blank");
+      }
+      case 'twitter':{
+        window.open("https://twitter.com/saikhsaifali", "_blank");
+      }
+      case 'facebook':{
+        window.open("https://www.facebook.com/saif4u", "_blank");
+      }
+    }
+  }
+
+
 }

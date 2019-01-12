@@ -1,8 +1,11 @@
-
+.top{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 5%
+}
 .contact-form{
   text-align: center;
   margin-top: 2%;
-  /* position: absolute; */
 }
 .contact-card{
   display: inline-block;
@@ -38,9 +41,12 @@ form-container {
 button{
   background-color: #3752B3;
 }
-/* .top{
-  background-color: #3752B3;
-  min-height:200px;
-  position: relative;
-} */
-
+.social-card{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 5px;
+  /* display: inline-block; */
+}
+:host /deep/ .social-card .mat-button-wrapper{
+  padding:0 !important;
+}
