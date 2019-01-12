@@ -12,4 +12,6 @@ export class PerosnalProjectsComponent implements OnInit {
   ngOnInit() {
   }
 
+  panelOpenState = true;
+
 }

@@ -19,6 +19,19 @@ mat-card{
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 5px;
 }
+.app-title{
+  font-size: 14px;
+}
+.gitbtn{
+  background-color: #282E32;
+  color: #ffffff;
+}
+.viewbtn{
+  display: none;
+}
+.hide{
+  display: none;
+}
 @media only screen and (max-width: 760px) {
   .perosnal-projects{
     display: grid;
