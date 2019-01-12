@@ -69,14 +69,16 @@ export class ContactComponent implements OnInit {
       .subscribe(
         (data)=>{
           // console.log("Response:",data)
-          if(data){
+          let res = JSON.parse(JSON.stringify(data));
+          if(res.success == true){
             this.toastr.success('Successfully Submitted!', 'Thank you!');
           }else{
             this.toastr.error('Something went wrong!','Please try again!')
           }
         });
 
-
+        // Clear all fields after submit
+        this.clearAll();
 
   }
 
@@ -96,6 +98,13 @@ export class ContactComponent implements OnInit {
     return throwError(
       'Something bad happened; please try again later.');
   };
+
+  clearAll(){
+    this.name = '';
+    this.email = '';
+    this.subject = '';
+    this.message = '';
+  }
 
   openSocial(social){
     switch(social){
