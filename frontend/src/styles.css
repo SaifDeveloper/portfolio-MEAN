@@ -80,3 +80,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .font400{
   font-weight: 400;
 }
+.no-display{
+  display: none;
+}
