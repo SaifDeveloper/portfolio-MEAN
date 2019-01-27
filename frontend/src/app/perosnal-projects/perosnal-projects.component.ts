@@ -17,7 +17,7 @@ export class PerosnalProjectsComponent implements OnInit {
   openGithub(project){
     switch(project){
       case 'fundraiser':{
-          window.open("https://www.google.com", "_blank");
+          window.open("https://github.com/SaifDeveloper/kickstarter", "_blank");
       }
       case 'petshop':{
         window.open("https://github.com/SaifDeveloper/pet-Shop", "_blank");
