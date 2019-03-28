@@ -65,18 +65,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .font14{
   font-size: 14px;
 }
-.linkedin_btn{
-  background-color: #0078B5 !important ;
-  color: #ffffff !important;
-}
-.twitter_btn{
-  background-color: #00A3F3 !important ;
-  color: #ffffff !important;
-}
-.facebook_btn{
-  background-color: #3268B1 !important ;
-  color: #ffffff !important;
-}
+
 .font400{
   font-weight: 400;
 }

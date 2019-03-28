@@ -1,6 +1,30 @@
 <div class="container">
   <h4 class="p-2 centerText bold">My Certifications</h4>
   <div class="certifications">
+      <mat-card>
+          <div class="certificate-wrapper">
+            <div class="certificate-image">
+              <!-- height=300px;width=400px -->
+              <img src="../../assets/images/certificates/angular-routing.png" class="img-responsive">
+            </div>
+            <div class="certificate-details">
+              <hr>
+              <button mat-raised-button (click)="verify('angular-routing')">Verify</button>
+            </div>
+          </div>
+        </mat-card>
+        <mat-card>
+            <div class="certificate-wrapper">
+              <div class="certificate-image">
+                <!-- height=300px;width=400px -->
+                <img src="../../assets/images/certificates/ES6.png" class="img-responsive">
+              </div>
+              <div class="certificate-details">
+                <hr>
+                <button mat-raised-button (click)="verify('es6')">Verify</button>
+              </div>
+            </div>
+          </mat-card>
     <mat-card>
       <div class="certificate-wrapper">
         <div class="certificate-image">
@@ -57,7 +81,7 @@
         </div>
         <div class="certificate-details no-display">
           <hr>
-          <button mat-raised-button  (click)="verify('py_coursera')">Verify</button>
+          <button mat-raised-button  (click)="verify('py_coursera')" disabled>Verify</button>
         </div>
       </div>
     </mat-card>

@@ -31,7 +31,14 @@ export class CertificationsComponent implements OnInit {
       case 'py_coursera':{
         window.open("https://github.com/SaifDeveloper/react-docker", "_blank");
       }
+      case 'angular-routing':{
+        window.open("https://app.pluralsight.com/learner/user/courses/angular-routing/certificate", "_blank");
+      }
+      case 'es6':{
+        window.open("https://www.udemy.com/certificate/UC-72B3XPR8/", "_blank");
+      }
     }
   }
 
 }
+

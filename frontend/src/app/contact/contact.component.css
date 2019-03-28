@@ -50,3 +50,19 @@ button{
 :host /deep/ .social-card .mat-button-wrapper{
   padding:0 !important;
 }
+
+.linkedin_btn{
+  background-color: #0078B5 !important ;
+  color: #ffffff !important;
+}
+.twitter_btn{
+  background-color: #00A3F3 !important ;
+  color: #ffffff !important;
+}
+.facebook_btn{
+  background-color: #3268B1 !important ;
+  color: #ffffff !important;
+}
+::ng-deep .mat-fab.mat-accent {
+  background-color: #3F51B5;
+}
